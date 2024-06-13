@@ -116,6 +116,7 @@ aside {
   }
   section {
     width: calc(50% - 1rem);
+    flex-direction: row;
   }
   section img {
     width: 150px;
@@ -125,13 +126,23 @@ aside {
 /* Medium View */
 @media screen and (min-width: 960px) {
   .flex-container {
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  section {
+    width: calc(49% - 1rem);
+    flex-direction: column;
   }
   section img {
     width: 370px;
     height: 300px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  aside {
+    width: 25%;
+    order: -1;
   }
 }
 /* Largest View */
@@ -142,8 +153,14 @@ aside {
     margin: 0 auto;
   }
 
+  section {
+    width: calc(49% - 1rem);
+    flex-direction: column;
+  }
   section img {
     width: 500px;
     height: 400px;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
